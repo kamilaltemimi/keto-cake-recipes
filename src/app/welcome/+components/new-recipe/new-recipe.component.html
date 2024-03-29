@@ -1,0 +1,127 @@
+<div class="form-container">
+
+<form class="form" (ngSubmit)="addNewRecipe(newRecipe)">
+
+<div class="main-row">
+<div class="column1">
+
+  <mat-form-field class="cake-name">
+    <mat-label for="title">Nazwa ciasta:</mat-label>
+    <textarea matInput type="text" class="form-control cake-name" required [(ngModel)]="newRecipe.title" name="title"></textarea>
+    <button *ngIf="newRecipe.title" matSuffix mat-icon-button aria-label="Clear" (click)="newRecipe.title=''">
+      <mat-icon>
+        close
+      </mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field class="cake-description">
+    <mat-label>Opis:</mat-label>
+    <textarea matInput class="form-control cake-description-text" required [(ngModel)]="newRecipe.description" name="description"></textarea>
+    <button *ngIf="newRecipe.description" matSuffix mat-icon-button aria-label="Clear" (click)="newRecipe.description=''">
+      <mat-icon>
+        close
+      </mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field class="cake-instruction">
+    <mat-label for="instruction">Instrukcja:</mat-label>
+    <textarea matInput class="form-control cake-instruction" required [(ngModel)]="newRecipe.instruction" name="instruction"></textarea>
+    <button *ngIf="newRecipe.instruction" matSuffix mat-icon-button aria-label="Clear" (click)="newRecipe.instruction=''">
+      <mat-icon>
+        close
+      </mat-icon>
+    </button>
+  </mat-form-field>
+
+</div>
+
+<div class="column2">
+  
+  <div class="time-container">
+    <mat-form-field class="form-group-time">
+      <mat-label>Czas (godziny)</mat-label>
+      <input matInput maxlength="2" [(ngModel)]="newRecipe.preparationTimeHours" name="preparationTimeHours">
+    </mat-form-field>
+    <mat-form-field class="form-group-time">
+      <mat-label>Czas (minuty)</mat-label>
+      <input matInput maxlength="2" [(ngModel)]="newRecipe.preparationTimeMinutes" name="preparationTimeMinutes">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field class="form-group">
+    <mat-label>Wklej link do obrazka</mat-label>
+    <input matInput [(ngModel)]="newRecipe.imageUrl" name="imageUrl">
+  </mat-form-field>
+
+  <div class="nutritionInfo-container">
+
+    <div class="nutritionInfo-container-row">
+
+      <mat-form-field class="nutritionInfo-container-column-element">
+        <mat-label>B</mat-label>
+        <input matInput maxlength="4" [(ngModel)]="newRecipe.nutritionInfo.protein" name="protein">
+      </mat-form-field>
+
+      <mat-form-field class="nutritionInfo-container-column-element">
+        <mat-label>T</mat-label>
+        <input matInput maxlength="4" [(ngModel)]="newRecipe.nutritionInfo.fat" name="fat">
+      </mat-form-field>
+
+      <mat-form-field class="nutritionInfo-container-column-element">
+        <mat-label>W</mat-label>
+        <input matInput maxlength="4" [(ngModel)]="newRecipe.nutritionInfo.carbs" name="carbs">
+      </mat-form-field>
+
+    </div>
+
+    <div class="nutritionInfo-container-row">
+
+      <mat-form-field class="nutritionInfo-container-column-element">
+        <mat-label>kcal</mat-label>
+        <input matInput maxlength="5" [(ngModel)]="newRecipe.nutritionInfo.calories" name="calories">
+      </mat-form-field>
+
+      <mat-form-field class="nutritionInfo-container-column-element">
+        <mat-label>Błonnik</mat-label>
+        <input matInput maxlength="3" [(ngModel)]="newRecipe.nutritionInfo.fiber" name="fiber">
+      </mat-form-field>
+
+      <mat-form-field class="nutritionInfo-container-column-element">
+        <mat-label>Cukry</mat-label>
+        <input matInput maxlength="4" [(ngModel)]="newRecipe.nutritionInfo.sugar" name="sugar">
+      </mat-form-field>
+
+    </div>
+
+  </div>
+
+
+      <div class="radio-container">
+          <mat-form-field class="select-vege-dairy">
+            <mat-label>Vege:</mat-label>
+            <mat-select name="isVegetarian" [(ngModel)]="newRecipe.isVegetarian">
+              <mat-option [value]="true">tak</mat-option>
+              <mat-option [value]="false">nie</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="select-vege-dairy">
+            <mat-label>Nabiał:</mat-label>
+            <mat-select name="isDairyFree" [(ngModel)]="newRecipe.isDairyFree">
+              <mat-option [value]="true">tak</mat-option>
+              <mat-option [value]="false">nie</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="submit-container">
+          <button class="submit-button" mat-fab extended color="primary" type="submit" [disabled]="!newRecipe">
+            Dodaj przepis
+          </button>
+        </div> 
+      </div>
+  </div>
+
+</form>
+
+</div>

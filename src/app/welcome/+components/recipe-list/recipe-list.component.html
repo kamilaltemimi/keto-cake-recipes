@@ -1,0 +1,43 @@
+<button class="fetch-button" mat-raised-button color="primary" (click)="getRecipes()">Wyświetl przepisy</button>
+
+
+
+
+<mat-grid-list cols="3" rowHeight="500px" gutterSize="30px">
+  <mat-grid-tile *ngFor="let recipe of recipeList">
+    <mat-card class="recipe">
+      <img mat-card-image class="image" src="{{recipe.imageUrl}}" alt="Brak zdjęcia">
+      <mat-card-content>
+        <div>
+          <p class="recipe-title">{{recipe.title}}</p>
+        </div>
+        <div  class="recipe-description">
+          <p>
+            {{recipe.description}}
+          </p>
+        </div>
+      </mat-card-content>
+      <div class="recipe-bottom-content">
+        <div class="recipe-bottom-content-vegedairy" *ngIf="recipe.isVegetarian === true && recipe.isDairyFree === true">
+          <div class="vege-yes">Vege</div>
+          <div class="dairy-yes">Nabiał</div>
+        </div>
+        <div class="recipe-bottom-content-vegedairy" *ngIf="recipe.isVegetarian === true && recipe.isDairyFree === false">
+          <div class="vege-yes">Vege</div>
+          <div class="dairy-no">Nabiał</div>
+        </div>
+        <div class="recipe-bottom-content-vegedairy" *ngIf="recipe.isVegetarian === false && recipe.isDairyFree === true">
+          <div class="vege-no">Vege</div>
+          <div class="dairy-yes">Nabiał</div>
+        </div>
+        <div class="recipe-bottom-content-vegedairy" *ngIf="recipe.isVegetarian === false && recipe.isDairyFree === false">
+          <div class="vege-no">Vege</div>
+          <div class="dairy-no">Nabiał</div>
+        </div>
+        <mat-card-actions>
+          <button (click)="navigate(recipe)" mat-button mat-raised-button color="basic">Szczegóły</button>
+        </mat-card-actions>
+      </div> 
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

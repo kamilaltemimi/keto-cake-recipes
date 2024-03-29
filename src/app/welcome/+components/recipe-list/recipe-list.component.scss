@@ -1,0 +1,60 @@
+.fetch-button {
+  margin-bottom: 15px;
+}
+
+.recipe {
+  display: flex;
+  justify-content: center;
+
+  height: 500px;
+  max-width: 450px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  width: 450px;
+  height: 300px;
+}
+
+.recipe-description {
+  height: 100px;
+  width: 420px;
+  overflow-y: scroll;
+}
+
+.recipe-bottom-content {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.recipe-bottom-content-vegedairy {
+  display: flex;
+  width: 115px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vege-yes, .dairy-yes {
+  background-color: rgb(0, 128, 0, 0.3);
+  width: 55px;
+  height: 25px;
+  text-align: center;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+
+.vege-no, .dairy-no {
+  background-color: rgb(255, 0, 0, 0.3);
+  width: 55px;
+  height: 25px;
+  text-align: center;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+
+.recipe-title {
+  font-family: Caveat;
+  margin: 15px 0 15px 0;
+  font-size: 36px;
+}

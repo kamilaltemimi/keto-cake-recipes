@@ -1,0 +1,33 @@
+p {
+  color: rgb(50, 50, 50);
+  margin: 0;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.navbar-element-logo {
+  padding-top: 2px;
+  height: 600x;
+  width: 60px;
+  cursor: pointer;
+}
+
+.navbar-element-about {
+  font-family: Caveat;
+  font-size: 36px;
+}
+
+.navbar-element-navigation {
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+}
+
+.navbar-element-navigation p {
+  cursor: pointer;
+}

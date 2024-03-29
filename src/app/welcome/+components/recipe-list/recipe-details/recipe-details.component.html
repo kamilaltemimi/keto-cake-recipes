@@ -1,0 +1,117 @@
+<div class="page-container">
+  <div class="content-container">
+    <div class="content-left-side">
+      <div class="recipe-image-container">
+        <img class="recipe-image" src="{{recipe?.imageUrl}}">
+      </div>
+      <div class="description-header">
+        Opis:
+      </div>
+      <div class="recipe-description">
+        {{recipe?.description}}
+      </div>
+    </div>
+
+    <div class="content-right-side">
+      <div class="content-right-side-first-row">
+        <div class="recipe-title">
+          {{recipe?.title}}
+        </div>
+
+        <div class="content-right-side-vegedairy" *ngIf="recipe?.isVegetarian === true && recipe?.isDairyFree === true">
+          <div class="vege-yes">Vege</div>
+          <div class="dairy-yes">Nabiał</div>
+        </div>
+        <div class="content-right-side-vegedairy" *ngIf="recipe?.isVegetarian === true && recipe?.isDairyFree === false">
+          <div class="vege-yes">Vege</div>
+          <div class="dairy-no">Nabiał</div>
+        </div>
+        <div class="content-right-side-vegedairy" *ngIf="recipe?.isVegetarian === false && recipe?.isDairyFree === true">
+          <div class="vege-no">Vege</div>
+          <div class="dairy-yes">Nabiał</div>
+        </div>
+        <div class="content-right-side-vegedairy" *ngIf="recipe?.isVegetarian === false && recipe?.isDairyFree === false">
+          <div class="vege-no">Vege</div>
+          <div class="dairy-no">Nabiał</div>
+        </div>
+
+        <div class="content-right-side-preparation-time">
+          Czas przygotowania: {{recipe?.preparationTimeHours}} h {{recipe?.preparationTimeMinutes}} min
+        </div>
+      </div>
+
+      <div class="recipe-instruction">
+        <div class="instruction-header">
+          Instrukcja:
+        </div>
+        {{recipe?.instruction}}
+      </div>
+
+      <div class="nutrition-info-header">
+        Wartości odżywcze:
+      </div>
+      <div class="nutritionInfo-container">
+
+        <div class="nutritionInfo-container-row">
+    
+        <div class="nutrition-info-element">
+          <div class="nutritionInfo-title">
+            Białko:
+          </div>
+          {{recipe?.nutritionInfo?.protein}}g
+        </div>
+        
+        <div class="nutrition-info-element">
+          <div class="nutritionInfo-title">
+            Tłuszcze:
+          </div>
+          {{recipe?.nutritionInfo?.fat}}g
+        </div>
+
+        <div class="nutrition-info-element">
+          <div class="nutritionInfo-title">
+            Węglowodany:
+          </div>
+          {{recipe?.nutritionInfo?.carbs}}g
+        </div>
+        
+    
+        </div>
+    
+        <div class="nutritionInfo-container-row">
+    
+          <div class="nutrition-info-element">
+            <div class="nutritionInfo-title">
+              Kalorie:
+            </div>
+            {{recipe?.nutritionInfo?.calories}}
+          </div>
+    
+          <div class="nutrition-info-element">
+            <div class="nutritionInfo-title">
+              Błonnik:
+            </div>
+            {{recipe?.nutritionInfo?.fiber}}g
+          </div>
+    
+          <div class="nutrition-info-element">
+            <div class="nutritionInfo-title">
+              Cukry:
+            </div>
+            {{recipe?.nutritionInfo?.sugar}}g
+          </div>
+    
+        </div>
+    
+      </div>
+
+        <button (click)="navigate()" mat-button mat-raised-button color="accent">
+          Edytuj
+        </button>
+
+    </div>
+
+  </div>
+</div>
+
+
