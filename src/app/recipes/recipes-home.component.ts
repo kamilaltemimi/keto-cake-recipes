@@ -3,10 +3,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  templateUrl: './recipes-home.component.html',
+  styleUrls: ['./recipes-home.component.scss']
 })
-export class WelcomeComponent {
+export class RecipesHomeComponent {
 
   constructor(
     private router: Router){}

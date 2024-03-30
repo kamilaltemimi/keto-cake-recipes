@@ -104,11 +104,12 @@
         </div>
     
       </div>
-
-        <button (click)="navigate()" mat-button mat-raised-button color="accent">
-          Edytuj
-        </button>
-
+        <div class="button-container">
+          <button class="delete-button" mat-button mat-raised-button color="warn" (click)="openDialog('200ms', '200ms', recipe?.id, recipe?.title)">Usuń</button>
+          <button class="edit-button" (click)="navigate(recipe?.id)" mat-button mat-raised-button color="accent">
+            Edytuj
+          </button>
+        </div>
     </div>
 
   </div>

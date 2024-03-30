@@ -1,0 +1,17 @@
+.container {
+  background-color:rgb(113, 7, 7);
+}
+
+.button-yes {
+  background-color: red;
+}
+
+.button-no {
+  background-color: green;
+}
+
+.button-container {
+  width: 500px;
+  display: flex;
+  justify-content: right;
+}

@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 mat-dialog-title>
+    Usuń przepis
+  </h2>
+  <mat-dialog-content>
+    Czy na pewno chcesz usunąć {{title}} ze swojej listy przepisów?
+  </mat-dialog-content>
+  <mat-dialog-actions class="button-container">
+    <button (click)="deleteRecipeById()" class="button-yes" mat-button mat-dialog-close>
+      Tak
+    </button>
+    <button class="button-no" mat-button mat-dialog-close cdkFocusInitial>
+      Nie
+    </button>
+  </mat-dialog-actions>
+</div>

@@ -5,12 +5,10 @@
 }
 
 header {
-  background-color: burlywood;
+  background-color: #deb887;
   height: 70px;
   padding: 0 20px 0 20px;
   flex-shrink: 0;
-  -webkit-box-shadow: 0px -35px 60px 8px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 0px -35px 60px 8px rgba(66, 68, 90, 1);
   box-shadow: 0px -35px 60px 8px rgba(66, 68, 90, 1);
   z-index: 1;
 }
@@ -21,13 +19,11 @@ main {
   padding: 20px;
 }
 
-
 footer {
   background-color: burlywood;
   height: 50px;
   padding: 0 20px 0 20px;
   flex-shrink: 0;
-  -webkit-box-shadow: 0px 35px 60px 8px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 0px 35px 60px 8px rgba(66, 68, 90, 1);
   box-shadow: 0px 35px 60px 8px rgba(66, 68, 90, 1);
+  z-index: 1;
 }

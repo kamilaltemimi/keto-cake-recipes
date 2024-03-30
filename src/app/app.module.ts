@@ -1,9 +1,8 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainModule } from './welcome/module/main.module';
+import { RecipesModule } from './recipes/recipes.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -14,10 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MainModule,
+    RecipesModule,
     CoreModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

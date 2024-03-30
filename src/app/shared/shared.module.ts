@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
@@ -25,7 +26,8 @@ import { MatCardModule } from '@angular/material/card';
     MatSelectModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    BrowserAnimationsModule
   ],
   exports: [
     FormsModule,
@@ -38,7 +40,8 @@ import { MatCardModule } from '@angular/material/card';
     MatSelectModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    BrowserAnimationsModule
   ]
 })
 export class SharedModule { }

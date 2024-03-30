@@ -1,6 +1,7 @@
-import { Recipe } from 'src/app/models/recipe';
+import { Recipe } from 'src/app/core/models/recipe';
 import { RecipeListService } from 'src/app/core/service/recipe-list.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-recipe',
@@ -29,11 +30,14 @@ export class NewRecipeComponent {
 }
   
   constructor(
-    private recipeListService: RecipeListService
+    private recipeListService: RecipeListService,
+    private router: Router
   ){}
 
     addNewRecipe(recipe: Recipe): void{
-      this.recipeListService.addNewRecipe(recipe).subscribe()
+      this.recipeListService.addNewRecipe(recipe).subscribe({
+        next:() => this.router.navigate(['list'])
+      })
     }
 
 }

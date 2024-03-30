@@ -1,0 +1,154 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  width: 830px;
+}
+
+.main-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column1 {
+  width: 400px;
+  
+  display: column;
+}
+
+.column2 {
+  display: column;
+}
+
+.form-group-radio {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  resize: none;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: space-between;
+  width: 305px;
+}
+
+.select-vege-dairy {
+  width: 150px;
+}
+
+.radio-selector {
+  width: 15px;
+  height: 15px;
+}
+
+
+
+.cake-name {
+  font-size: 16px;
+  width: 500px;
+  height: 100px;
+}
+
+.cake-description {
+  height: 220px;
+  width: 500px;
+  max-width: 500px;
+}
+
+.cake-description-text {
+  height: 220px;
+  width: 500px;
+  max-width: 490px;
+}
+
+.cake-instruction {
+  width: 500px;
+  height: 220px;
+}
+
+.preparation-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 130px;
+  height: 20px;
+}
+
+.time-container {
+  display: flex;
+  width: 305px;
+  justify-content: space-between;
+}
+
+.form-group-time {
+  width: 150px;
+}
+
+.nutritionInfo-container {
+  display: flex;
+  flex-direction: column;
+  width: 305px;
+}
+
+.nutritionInfo-container-row {
+  display: flex;
+  width: 305px;
+  justify-content: space-between;
+}
+
+.nutritionInfo-container-column-element {
+  width: 95px;
+}
+
+.bottom-container {
+  display: flex;
+  row-gap: 50px;
+  width: 300px;
+}
+
+.form-group-radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-container-right-side {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-container-nutrition-info {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.bottom-container-submit {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.submit-container {
+  width: 305px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button {
+  width: 150px;
+  height: 50px;
+}
