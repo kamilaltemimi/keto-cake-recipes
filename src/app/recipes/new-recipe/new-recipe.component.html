@@ -27,7 +27,7 @@
 
   <mat-form-field class="cake-instruction">
     <mat-label for="instruction">Instrukcja:</mat-label>
-    <textarea matInput class="form-control cake-instruction" required [(ngModel)]="newRecipe.instruction" name="instruction"></textarea>
+    <textarea matInput class="form-control cake-instruction-text" required [(ngModel)]="newRecipe.instruction" name="instruction"></textarea>
     <button *ngIf="newRecipe.instruction" matSuffix mat-icon-button aria-label="Clear" (click)="newRecipe.instruction=''">
       <mat-icon>
         close

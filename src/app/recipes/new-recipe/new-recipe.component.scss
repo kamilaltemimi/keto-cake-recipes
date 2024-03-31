@@ -62,20 +62,23 @@
 }
 
 .cake-description {
-  height: 220px;
+  height: 200px;
   width: 500px;
-  max-width: 500px;
 }
 
 .cake-description-text {
-  height: 220px;
-  width: 500px;
-  max-width: 490px;
+  height: 150px !important;
+  width: 400px;
 }
 
 .cake-instruction {
+  height: 200px;
   width: 500px;
-  height: 220px;
+}
+
+.cake-instruction-text {
+  width: 400px;
+  height: 150px !important;
 }
 
 .preparation-time {
