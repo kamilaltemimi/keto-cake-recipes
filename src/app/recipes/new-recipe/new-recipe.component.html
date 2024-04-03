@@ -7,7 +7,7 @@
 
   <mat-form-field class="cake-name">
     <mat-label for="title">Nazwa ciasta:</mat-label>
-    <textarea matInput type="text" class="form-control cake-name" required [(ngModel)]="newRecipe.title" name="title"></textarea>
+    <textarea matInput type="text" class="cake-name" required [(ngModel)]="newRecipe.title" name="title"></textarea>
     <button *ngIf="newRecipe.title" matSuffix mat-icon-button aria-label="Clear" (click)="newRecipe.title=''">
       <mat-icon>
         close
@@ -17,7 +17,7 @@
 
   <mat-form-field class="cake-description">
     <mat-label>Opis:</mat-label>
-    <textarea matInput class="form-control cake-description-text" required [(ngModel)]="newRecipe.description" name="description"></textarea>
+    <textarea matInput class="cake-description-text" required [(ngModel)]="newRecipe.description" name="description"></textarea>
     <button *ngIf="newRecipe.description" matSuffix mat-icon-button aria-label="Clear" (click)="newRecipe.description=''">
       <mat-icon>
         close
@@ -27,7 +27,7 @@
 
   <mat-form-field class="cake-instruction">
     <mat-label for="instruction">Instrukcja:</mat-label>
-    <textarea matInput class="form-control cake-instruction-text" required [(ngModel)]="newRecipe.instruction" name="instruction"></textarea>
+    <textarea matInput class="cake-instruction-text" required [(ngModel)]="newRecipe.instruction" name="instruction"></textarea>
     <button *ngIf="newRecipe.instruction" matSuffix mat-icon-button aria-label="Clear" (click)="newRecipe.instruction=''">
       <mat-icon>
         close
@@ -40,17 +40,17 @@
 <div class="column2">
   
   <div class="time-container">
-    <mat-form-field class="form-group-time">
+    <mat-form-field class="time">
       <mat-label>Czas (godziny)</mat-label>
       <input matInput maxlength="2" [(ngModel)]="newRecipe.preparationTimeHours" name="preparationTimeHours">
     </mat-form-field>
-    <mat-form-field class="form-group-time">
+    <mat-form-field class="time">
       <mat-label>Czas (minuty)</mat-label>
       <input matInput maxlength="2" [(ngModel)]="newRecipe.preparationTimeMinutes" name="preparationTimeMinutes">
     </mat-form-field>
   </div>
 
-  <mat-form-field class="form-group">
+  <mat-form-field class="image-url">
     <mat-label>Wklej link do obrazka</mat-label>
     <input matInput [(ngModel)]="newRecipe.imageUrl" name="imageUrl">
   </mat-form-field>

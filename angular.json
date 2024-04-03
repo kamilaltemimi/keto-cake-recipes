@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "keto-cake-recipes-platform:build:production"
+              "buildTarget": "keto-cake-recipes-platform:build:production"
             },
             "development": {
-              "browserTarget": "keto-cake-recipes-platform:build:development"
+              "buildTarget": "keto-cake-recipes-platform:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "keto-cake-recipes-platform:build"
+            "buildTarget": "keto-cake-recipes-platform:build"
           }
         },
         "test": {
